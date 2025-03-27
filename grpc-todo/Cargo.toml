@@ -1,0 +1,17 @@
+[package]
+name = "grpc-todo"
+version = "0.1.0"
+edition = "2024"
+
+[build-dependencies]
+tonic-build = { workspace = true }
+
+[dependencies]
+tonic = { workspace = true }
+prost = { workspace = true }
+tokio = { workspace = true }
+sqlx = { workspace = true }
+dotenv = { workspace = true }
+serde = { workspace = true }
+tonic-web = { workspace = true }
+tower-http = { workspace = true }

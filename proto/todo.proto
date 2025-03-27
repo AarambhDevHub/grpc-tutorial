@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package todo;
+
+service TodoService {
+    rpc CreateTodo (CreateTodoRequest) returns (Todo);
+    rpc GetTodos (Empty) returns (TodoList);
+    rpc UpdateTodo (UpdateTodoRequest) returns (Todo);
+    rpc DeleteTodo (DeleteTodoRequest) returns (Empty);
+}
+
+message Todo {
+    optional int64 id = 1;
+    string title = 2;
+    bool completed = 3;
+}
+
+message CreateTodoRequest {
+    string title = 1;
+}
+
+message UpdateTodoRequest {
+    optional int64 id = 1;
+    string title = 2;
+    bool completed = 3;
+}
+
+message DeleteTodoRequest {
+    optional int64 id = 1;
+}
+
+message Empty {}
+
+message TodoList {
+    repeated Todo todos = 1;
+}

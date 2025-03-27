@@ -1,0 +1,27 @@
+[workspace]
+members = [
+    ".",
+    "htmx-warp",
+    "grpc-todo"
+]
+
+resolver = "2"
+
+[workspace.dependencies]
+tokio = { version = "1.0", features = ["full"] }
+warp = "0.3"
+tonic = "0.10"
+prost = "0.12"
+serde = { version = "1.0", features = ["derive"] }
+html-escape = "0.2.13"
+tonic-build = "0.10"
+sqlx = { version = "0.7", features = ["sqlite", "runtime-tokio"] }
+dotenv = "0.15"
+tonic-web = "0.10"
+tower-http = { version = "0.4", features = ["cors"] }
+htmx = "0.1"
+
+
+[workspace.package]
+edition = "2024"
+version = "0.1.0"

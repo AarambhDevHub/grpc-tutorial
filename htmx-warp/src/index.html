@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo App</title>
+    <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+    <style>
+        .completed { text-decoration: line-through; }
+        .todo-item { margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>Todo App</h1>
+    
+    <form hx-post="/todos" hx-target="#todo-list" hx-swap="beforeend">
+        <input type="text" name="title" placeholder="New todo" required>
+        <button type="submit">Add</button>
+    </form>
+    
+    <div id="todo-list" hx-get="/todos" hx-trigger="load">
+        Loading todos...
+    </div>
+</body>
+</html>

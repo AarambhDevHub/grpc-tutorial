@@ -1,0 +1,16 @@
+[package]
+name = "htmx-warp"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tokio = { workspace = true }
+warp = { workspace = true }
+tonic = { workspace = true }
+prost = { workspace = true }
+htmx = { workspace = true }  # For HTMX helper functions (optional)
+serde = { workspace = true }
+html-escape = { workspace = true }
+
+[build-dependencies]
+tonic-build = { workspace = true }

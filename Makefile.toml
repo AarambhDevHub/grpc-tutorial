@@ -1,0 +1,10 @@
+[tasks.grpc-todo]
+command = "cargo"
+args = ["run", "-p", "grpc-todo"]
+
+[tasks.htmx-warp]
+command = "cargo"
+args = ["run", "-p", "htmx-warp"]
+
+[tasks.run-both]
+run_task = {name = ["grpc-todo", "htmx-warp"], parallel = true}
